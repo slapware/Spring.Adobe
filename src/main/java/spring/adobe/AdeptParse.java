@@ -25,6 +25,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
+import org.springframework.transaction.annotation.Transactional;
 
 import spring.adobe.model.AUser;
 import spring.adobe.model.GuidUtil;
@@ -109,11 +110,11 @@ public class AdeptParse {
 		return totalamount;
 	}
 
-	public double getSubtotal() {
+	private double getSubtotal() {
 		return subtotal;
 	}
 
-	public double getUnitPrice() {
+	private double getUnitPrice() {
 		return unitPrice;
 	}
 
@@ -121,7 +122,7 @@ public class AdeptParse {
 		return quantity;
 	}
 
-	public void setQuantity(int quantity) {
+	private void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 
@@ -145,11 +146,11 @@ public class AdeptParse {
 		return billcity;
 	}
 
-	public void setBillcity(String billcity) {
+	private void setBillcity(String billcity) {
 		this.billcity = billcity;
 	}
 
-	public void setBillpostalCode(String billpostalCode) {
+	private void setBillpostalCode(String billpostalCode) {
 		this.billpostalCode = billpostalCode;
 	}
 
@@ -165,11 +166,11 @@ public class AdeptParse {
 		return paymentMethodName;
 	}
 
-	public void setPaymentMethodName(String paymentMethodName) {
+	private void setPaymentMethodName(String paymentMethodName) {
 		this.paymentMethodName = paymentMethodName;
 	}
 
-	public void setCustomerLastName(String customerLastName) {
+	private void setCustomerLastName(String customerLastName) {
 		this.customerLastName = this.MysqlRealScapeString(customerLastName);
 	}
 
@@ -177,27 +178,27 @@ public class AdeptParse {
 		return customerFirstName;
 	}
 
-	public void setCustomerFirstName(String customerFirstName) {
+	private void setCustomerFirstName(String customerFirstName) {
 		this.customerFirstName = this.MysqlRealScapeString(customerFirstName);
 	}
 
-	public void setCustomerEmail(String customerEmail) {
+	private void setCustomerEmail(String customerEmail) {
 		this.customerEmail = this.MysqlRealScapeString(customerEmail);
 	}
 
-	public void setSubtotal(double subtotal) {
+	private void setSubtotal(double subtotal) {
 		this.subtotal = subtotal;
 	}
 
-	public void setTotalamount(double totalamount) {
+	private void setTotalamount(double totalamount) {
 		this.totalamount = totalamount;
 	}
 
-	public String getState() {
+	private String getState() {
 		return state;
 	}
 
-	public void setState(String state) {
+	private void setState(String state) {
 		this.state = state;
 	}
 
@@ -205,11 +206,11 @@ public class AdeptParse {
 		return postalCode;
 	}
 
-	public void setPostalCode(String postalCode) {
+	private void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
 
-	public String getCurrencyCode() {
+	private String getCurrencyCode() {
 		return currencyCode;
 	}
 
@@ -221,7 +222,7 @@ public class AdeptParse {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
+	private void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
@@ -229,7 +230,7 @@ public class AdeptParse {
 		return name2;
 	}
 
-	public void setName2(String name2) {
+	private void setName2(String name2) {
 		this.name2 = name2;
 	}
 
@@ -237,7 +238,7 @@ public class AdeptParse {
 		return name1;
 	}
 
-	public void setName1(String name1) {
+	private void setName1(String name1) {
 		this.name1 = name1;
 	}
 
@@ -245,7 +246,7 @@ public class AdeptParse {
 		return line1;
 	}
 
-	public void setLine1(String line1) {
+	private void setLine1(String line1) {
 		this.line1 = line1;
 	}
 
@@ -253,7 +254,7 @@ public class AdeptParse {
 		return country;
 	}
 
-	public void setCountry(String country) {
+	private void setCountry(String country) {
 		this.country = this.MysqlRealScapeString(country);
 	}
 
@@ -261,7 +262,7 @@ public class AdeptParse {
 		return city;
 	}
 
-	public void setCity(String city) {
+	private void setCity(String city) {
 		this.city = this.MysqlRealScapeString(city);
 	}
 
@@ -269,7 +270,7 @@ public class AdeptParse {
 		return addressID;
 	}
 
-	public void setAddressID(String addressID) {
+	private void setAddressID(String addressID) {
 		this.addressID = this.MysqlRealScapeString(addressID);
 	}
 
@@ -277,7 +278,7 @@ public class AdeptParse {
 		return submissionDate;
 	}
 
-	public void setSubmissionDate(String submissionDate) {
+	private void setSubmissionDate(String submissionDate) {
 		this.submissionDate = this.MysqlRealScapeString(submissionDate);
 	}
 
@@ -293,11 +294,11 @@ public class AdeptParse {
 		return downUrl;
 	}
 
-	public void setDownUrl(String downUrl) {
+	private void setDownUrl(String downUrl) {
 		this.downUrl = this.MysqlRealScapeString(downUrl);
 	}
 
-	public void setStore(String store) {
+	private void setStore(String store) {
 		this.store = store;
 	}
 
@@ -309,11 +310,11 @@ public class AdeptParse {
 		return productID;
 	}
 
-	public void setProductID(String productID) {
+	private void setProductID(String productID) {
 		this.productID = productID;
 	}
 
-	public void setLineItemID(String lineItemID) {
+	private void setLineItemID(String lineItemID) {
 		this.lineItemID = this.MysqlRealScapeString(lineItemID);
 	}
 
@@ -321,7 +322,7 @@ public class AdeptParse {
 		return mfrPartNumber;
 	}
 
-	public void setMfrPartNumber(String mfrPartNumber) {
+	private void setMfrPartNumber(String mfrPartNumber) {
 		this.mfrPartNumber = mfrPartNumber;
 	}
 
@@ -329,7 +330,7 @@ public class AdeptParse {
 		return externalReferenceID;
 	}
 
-	public void setExternalReferenceID(String externalReferenceID) {
+	private void setExternalReferenceID(String externalReferenceID) {
 		this.externalReferenceID = externalReferenceID;
 	}
 
@@ -341,7 +342,7 @@ public class AdeptParse {
 		this.title = this.MysqlRealScapeString(title);
 	}
 
-	public void setOrderID(String orderID) {
+	private void setOrderID(String orderID) {
 		this.orderID = orderID;
 	}
 
@@ -349,7 +350,7 @@ public class AdeptParse {
 		return loginID;
 	}
 
-	public void setLoginID(String loginID) {
+	private void setLoginID(String loginID) {
 		this.loginID = loginID;
 	}
 
@@ -357,14 +358,15 @@ public class AdeptParse {
 		return Password;
 	}
 
-	public void setPassword(String password) {
+	private void setPassword(String password) {
 		Password = password;
 	}
 	public AdeptParse() {
 //		this.userRepository = ctx.getBean("UserRepository");
     }
-    
-   public Boolean ParseData()  {
+
+	@Transactional
+	public Boolean ParseData()  {
 	Document xmlDocument = this.parseXmlFromString(this.getRawXml());
     	String expression = "//orderID";
     	try {
