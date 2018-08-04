@@ -27,7 +27,7 @@ public class SignIn {
 	private UserRepository userRepository;
 
     public String CheckUser(String user, String pass) throws ParserConfigurationException {
-    	String returnMessage = "";
+    	String returnMessage;
     	
     	AUser auser = new AUser();
     	List<AUser> mysource = (ArrayList<AUser>) userRepository.findByLogin(user, pass);
