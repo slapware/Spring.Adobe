@@ -36,7 +36,7 @@ import java.util.Base64;
 @RestController
 public class RegisterController {
       private static final Logger LOGGER = LoggerFactory.getLogger(AdeptParse.class);
-
+            
 	  private String IV;
 	  @Autowired
 	  private AdeptParse pAdobe;

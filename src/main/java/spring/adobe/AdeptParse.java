@@ -93,7 +93,7 @@ public class AdeptParse {
 		return tax;
 	}
 
-	public void setTax(double tax) {
+	private void setTax(double tax) {
 		this.tax = tax;
 	}
 
@@ -126,7 +126,7 @@ public class AdeptParse {
 		this.quantity = quantity;
 	}
 
-	public void setUnitPrice(double unitPrice) {
+	private void setUnitPrice(double unitPrice) {
 		this.unitPrice = unitPrice;
 	}
 
@@ -154,7 +154,7 @@ public class AdeptParse {
 		this.billpostalCode = billpostalCode;
 	}
 
-	public void setTestorder(String testorder) {
+	private void setTestorder(String testorder) {
 		this.testorder = testorder;
 	}
 
@@ -214,7 +214,7 @@ public class AdeptParse {
 		return currencyCode;
 	}
 
-	public void setCurrencyCode(String currencyCode) {
+	private void setCurrencyCode(String currencyCode) {
 		this.currencyCode = currencyCode;
 	}
 
@@ -338,7 +338,7 @@ public class AdeptParse {
 		return title;
 	}
 
-	public void setTitle(String title) {
+	private void setTitle(String title) {
 		this.title = this.MysqlRealScapeString(title);
 	}
 

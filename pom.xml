@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <!--  
   <groupId>com.slapware</groupId>
   <artifactId>spring-boot-example</artifactId>
   <version>0.0.1-SNAPSHOT</version>
@@ -8,9 +9,20 @@
 <parent>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-parent</artifactId>
-  <version>1.5.9.RELEASE</version>
+  <version>1.5.10.RELEASE</version>
   </parent>
+  -->
+  
+    <groupId>com.slapware</groupId>
+    <artifactId>Adobe-SlapWare</artifactId>
+    <version>0.1.0</version>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+  
 <dependencies>
 
         <!-- JPA Data (We are going to use Repositories, Entities, Hibernate, etc...) -->
@@ -31,16 +43,53 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-    <dependency>  
-        <groupId>org.springframework.boot</groupId>  
-        <artifactId>spring-boot-starter-web</artifactId>  
-    </dependency> 
-    
-    <dependency>
-    	<groupId>org.springframework.boot</groupId>
-    	<artifactId>spring-boot-configuration-processor</artifactId>
-    	<optional>true</optional>
-    </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Cucumber additions -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <scope>test</scope>
+            <version>1.0.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>1.0.11</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- tag::test[] -->
+		<dependency>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>rest-assured</artifactId>
+		      <version>3.0.7</version>
+		      <scope>test</scope>
+		</dependency>
+		
+        <dependency>
+    		<groupId>junit</groupId>
+	    	<artifactId>junit</artifactId>
+	    	<scope>test</scope>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.hamcrest</groupId>
+		    <artifactId>hamcrest-all</artifactId>
+		    <version>1.3</version>
+		    <scope>test</scope>
+		</dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- end::test[] -->
+
 </dependencies>
 
 <properties>  
@@ -54,6 +103,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+       <!--  <defaultGoal>compile</defaultGoal> -->
     </build>
 
     <repositories>
