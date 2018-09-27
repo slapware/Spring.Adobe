@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("singleton")
-class SlapCrypt {
+public class SlapCrypt {
 
 	public String decrypt(byte[] cipherText, String encryptionKey, String myIV) throws Exception{
 //	    Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding", "SunJCE");
