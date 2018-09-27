@@ -28,7 +28,7 @@ public class TestEncrypt {
 	}
 
 	@Test
-	void test() {
+	public void test() {
 		SlapCrypt crypto = new SlapCrypt();
 		String plaintest = "Test string to be AES encrypted";
 		byte[] encbyte;
