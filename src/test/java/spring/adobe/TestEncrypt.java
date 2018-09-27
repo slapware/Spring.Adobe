@@ -8,6 +8,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Base64;
+// test fix no method
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 public class TestEncrypt {
 
