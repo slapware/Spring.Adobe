@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Base64;
 
-class TestEncrypt {
+public class TestEncrypt {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
