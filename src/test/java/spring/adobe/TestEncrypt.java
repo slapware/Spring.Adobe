@@ -11,7 +11,7 @@ import java.util.Base64;
 
 public class TestEncrypt {
 
-	@BeforeAll
+/*	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
 
@@ -26,7 +26,7 @@ public class TestEncrypt {
 	@AfterEach
 	void tearDown() throws Exception {
 	}
-
+*/
 	@Test
 	public void test() {
 		SlapCrypt crypto = new SlapCrypt();
